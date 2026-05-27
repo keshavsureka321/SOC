@@ -1,0 +1,54 @@
+Week 1 
+
+Pandas
+
+Addind a csv file: df=pd.read_csv("Location of the csv file in your P.C")
+
+We add () after a function but not after an attribute. 
+Some basic functions include:
+head()
+tail()
+info() #Gives us details on each column. Helps to identify how should you start cleaning the data.
+describe() #gives us information for all the int and float data types and ignores object data type.
+min()
+max()
+sum()
+mean() 
+count() #Total number of non-null values
+unique() #Gives array of all the uniques values
+nunique() #Counts number of unique values
+var() #Varience
+std() #Standard deviation
+
+To operate in terms of columns:
+df["Column_name"] # It is a seriess as it includes only one column
+df["Column1", "Column2"] #It is a dataframe as it contains more than one column
+
+To operate in terms of row:
+df.iloc[row] #Gives us the data of that particular row as series
+df.iloc[row_start:row_end:step] #Gives us a particular data frame
+df.iloc[[0,2,6,9]] #Gives us dataset of these particular rows
+
+#We can also fetch columns by using iloc. After comma we start giving details for the column we require.
+df.iloc[:,[4,5,7]] #Gives column no. 4,5,7
+
+# & is a bitwise operator which is used for two boolean series 
+Feteching data based on a condition:
+
+
+
+
+
+
+
+#To convert a data type from string to numeric 
+  df["column_name"]=pd.to_numeric=(df["column_name"], errors="coerce")  # errors="coerce" turns non-numeric values like "Not Provided" into NaN
+Imp function:
+df['Column'].value_counts() #Applicable on a series and the index is name of the string in column and value is no. of time it occured
+
+Plotting a graph:
+We can plot a graph by using the .plot(kind'histo/bar/barh/pie') # Use it after .value_counts().
+
+
+
+
